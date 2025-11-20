@@ -12,12 +12,12 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 public class CostumerDto {
 
-    private Long id;
-    private Integer cu;
+    private String id;
+    private String cu;
     private String name;
     private String address;
     private String email;
-    private Integer mobile;
+    private String mobile;
 
 
 }

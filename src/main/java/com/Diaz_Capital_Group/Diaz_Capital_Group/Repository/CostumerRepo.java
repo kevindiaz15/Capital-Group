@@ -8,8 +8,8 @@ import java.security.PublicKey;
 import java.util.Optional;
 
 @Repository
-public interface CostumerRepo extends JpaRepository<CostumerEntity,Long> {
+public interface CostumerRepo extends JpaRepository<CostumerEntity,String> {
 
-    public Optional<CostumerEntity> findByCu(Integer cu);
+    public Optional<CostumerEntity> findByCu(String cu);
 
 }

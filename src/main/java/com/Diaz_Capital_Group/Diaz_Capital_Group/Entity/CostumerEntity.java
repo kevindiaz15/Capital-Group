@@ -21,12 +21,12 @@ public class CostumerEntity implements IMapper<CostumerDto>, Serializable {
     private static final long serialVersionUID = 1L;
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.UUID)
     @Column(name = "id", updatable = false,nullable = false, length = 60)
-    private Long id;
+    private String id;
 
     @Column(name = "cu", nullable = false, length = 60, unique = true)
-    private Integer cu;
+    private String cu;
 
     @Column(name = "name", nullable = false,length = 100)
     private String name;
@@ -38,7 +38,7 @@ public class CostumerEntity implements IMapper<CostumerDto>, Serializable {
     private String email;
 
     @Column(name = "mobile",nullable = false, length = 15)
-    private Integer mobile;
+    private String mobile;
 
     @Override
     public CostumerDto getData() {
@@ -57,14 +57,11 @@ public class CostumerEntity implements IMapper<CostumerDto>, Serializable {
         this.id =costumerDto.getId();
         this.cu = costumerDto.getCu();
         this.name = costumerDto.getName();
+        this.email =costumerDto.getEmail();
         this.address = costumerDto.getAddress();
         this.mobile = costumerDto.getMobile();;
     }
 
-
-
-
-
-
+    
 
 }

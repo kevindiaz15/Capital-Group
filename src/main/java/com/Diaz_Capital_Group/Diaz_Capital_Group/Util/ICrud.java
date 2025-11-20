@@ -7,12 +7,12 @@ public interface ICrud<T> {
 
     List<T> getAll();
 
-    Optional<T> getByID(Long id);
+    Optional<T> getByID(String id);
 
     T add(T t);
 
     T upDate(T t);
 
-    void delete(Long id);
+    void delete(String id);
 
 }
